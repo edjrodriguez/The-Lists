@@ -3,12 +3,12 @@ import GroceryCard from "../ItemCards/GroceryCard";
 
 const GroceryItems = ({ groceryItems }) => {
     let groceryCards = groceryItems.map(grocery => {
-        const { id, item, quantity, description } = grocery
+        const { id, groceryItem, quantity, description } = grocery
         return(
             <GroceryCard
                 id={id}
                 key={id}
-                item={item}
+                item={groceryItem}
                 quantity={quantity}
                 description={description}
             />
