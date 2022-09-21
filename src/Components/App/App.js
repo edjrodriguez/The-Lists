@@ -2,6 +2,8 @@ import React from 'react'
 import { Route, Link } from "react-router-dom"
 import Form from '../Form/Form'
 import GroceryItems from '../ItemContainer/GroceryItems'
+import WhitsItems from '../ItemContainer/WhitsItems'
+import EddiesItems from '../ItemContainer/EddiesItems'
 import { fetchLists } from "../../apiCalls"
 
 class App extends React.Component{
@@ -66,9 +68,9 @@ class App extends React.Component{
                         <div>
                             <Link to='/'>Home</Link>
                             <Form />
-                            {/* <GroceryItems
+                            <WhitsItems
                             whitWishList={this.state.whitWishList}
-                            /> */}
+                            />
                         </div>
                     )
                 }}/>
@@ -77,9 +79,9 @@ class App extends React.Component{
                         <div>
                             <Link to='/'>Home</Link>
                             <Form />
-                            {/* <GroceryItems
-                            whitWishList={this.state.whitWishList}
-                            /> */}
+                            <EddiesItems
+                                eddieWishList={this.state.eddieWishList}
+                            />
                         </div>
                     )
                 }}/>
