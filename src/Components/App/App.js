@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Link } from "react-router-dom"
 import Form from '../Form/Form'
 import GroceryItems from '../ItemContainer/GroceryItems'
 import { fetchLists } from "../../apiCalls"
@@ -39,10 +40,10 @@ class App extends React.Component{
         return(
             <main className='App'>
                 <h1>The Lists</h1>
+                <Form />
                 <GroceryItems
                     groceryItems={this.state.groceryItems}
                 />
-                <Form />
             </main>
         )
     }
