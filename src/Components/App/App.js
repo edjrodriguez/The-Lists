@@ -19,7 +19,6 @@ class App extends React.Component{
         console.log('working')
         fetchLists()
         .then((response) => {
-            console.log(response)
             const groceryList = response.groceries
             const wWishList = response.whitWishList
             const eWishList =  response.eddieWishList
@@ -50,9 +49,7 @@ class App extends React.Component{
                             <Link to='/eddies-wish-list'>Eddie's Wish List</Link>
                         </div>
                     )
-                }}
-                />
-
+                }}/>
                 <Route path='/groceries' render={() => {
                     return (
                         <div>
@@ -63,8 +60,7 @@ class App extends React.Component{
                             />
                         </div>
                     )
-                }}
-                />
+                }}/>
                  <Route path='/whitneys-wish-list' render={() => {
                     return (
                         <div>
@@ -75,8 +71,7 @@ class App extends React.Component{
                             /> */}
                         </div>
                     )
-                }}
-                />
+                }}/>
                 <Route path='/eddies-wish-list' render={() => {
                     return (
                         <div>
@@ -87,8 +82,7 @@ class App extends React.Component{
                             /> */}
                         </div>
                     )
-                }}
-                />
+                }}/>
             </main>
         )
     }
