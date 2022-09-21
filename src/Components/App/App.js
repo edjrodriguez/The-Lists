@@ -17,6 +17,31 @@ class App extends React.Component{
         }
     }
 
+    addItem = (newItem) => {
+        if(newItem.groceryItem) {
+            this.setState({
+                groceryItems: [
+                    ...this.state.groceryItems,
+                    newItem
+                ]
+            })
+        } else if(newItem.whitneyItem) {
+            this.setState({
+                whitWishList: [
+                    ...this.state.whitWishList,
+                    newItem
+                ]
+            })
+        } else if(newItem.eddieItem) {
+            this.setState({
+                eddieWishList: [
+                    ...this.state.eddieWishList,
+                    newItem
+                ]
+            })
+        }
+    }
+
     componentDidMount() {
         console.log('working')
         fetchLists()
@@ -37,6 +62,33 @@ class App extends React.Component{
           })
     }
 
+    addItem = (newItem) => {
+        if(newItem.groceryItem) {
+            this.setState({
+                groceryItems: [
+                    ...this.state.groceryItems,
+                    newItem
+                ]
+            })
+        } else if(newItem.whitneyItem) {
+            this.setState({
+                whitWishList: [
+                    ...this.state.whitWishList,
+                    newItem
+                ]
+            })
+        } else if(newItem.eddieItem) {
+            this.setState({
+                eddieWishList: [
+                    ...this.state.eddieWishList,
+                    newItem
+                ]
+            })
+        }
+    }
+        
+    
+
     render() {
         return(
             <main className='App'>
@@ -56,7 +108,9 @@ class App extends React.Component{
                     return (
                         <div>
                             <Link to='/'>Home</Link>
-                            <Form />
+                            <Form 
+                                addItem={this.addItem}
+                            />
                             <GroceryItems
                             groceryItems={this.state.groceryItems}
                             />
@@ -67,7 +121,9 @@ class App extends React.Component{
                     return (
                         <div>
                             <Link to='/'>Home</Link>
-                            <Form />
+                            <Form 
+                                addItem={this.addItem}
+                            />
                             <WhitsItems
                             whitWishList={this.state.whitWishList}
                             />
@@ -78,7 +134,9 @@ class App extends React.Component{
                     return (
                         <div>
                             <Link to='/'>Home</Link>
-                            <Form />
+                            <Form 
+                                addItem={this.addItem}
+                            />
                             <EddiesItems
                                 eddieWishList={this.state.eddieWishList}
                             />

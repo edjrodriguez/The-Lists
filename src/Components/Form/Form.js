@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom"
-
+import { v4 as uuidV4 } from "uuid"
 
 class Form extends React.Component{
     constructor() {
@@ -19,6 +19,27 @@ class Form extends React.Component{
         const { name, value } = event.target
         this.setState({
             [name]: value
+        })
+    }
+
+    submitItem = (event) => {
+        event.preventDefault()
+        const newItem = {
+            id: uuidV4(),
+            ...this.state
+        }
+        this.props.addItem(newItem)
+        this.clearInputs()
+    }
+
+    clearInputs = () => {
+        this.setState({
+            groceryItem: '',
+            whitneyItem: '',
+            eddieItem: '',
+            quantity: '',
+            link: '',
+            description:''
         })
     }
 
@@ -51,7 +72,7 @@ class Form extends React.Component{
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
-                        <button>Add to list</button>
+                        <button onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
@@ -59,7 +80,7 @@ class Form extends React.Component{
                 return(
                     <form>
                          <input 
-                            // required
+                            required
                             placeholder="Item"
                             name='whitneyItem'
                             value={this.state.whitneyItem}
@@ -67,7 +88,7 @@ class Form extends React.Component{
                             
                         />
                         <input
-                            // required
+                            required
                             placeholder="Link?"
                             name='link'
                             value={this.state.link}
@@ -79,7 +100,7 @@ class Form extends React.Component{
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
-                        <button>Add to wish list</button>
+                        <button onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
@@ -87,14 +108,14 @@ class Form extends React.Component{
                 return(
                     <form>
                         <input
-                            // required 
+                            required 
                             placeholder="Item"
                             name='eddieItem'
                             value={this.state.eddieItem}
                             onChange={this.handleChange}
                         />
                         <input
-                            // required
+                            required
                             placeholder="Link?"
                             name='link'
                             value={this.state.link}
@@ -106,7 +127,7 @@ class Form extends React.Component{
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
-                        <button>Add to wish list</button>
+                        <button onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
