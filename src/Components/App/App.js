@@ -39,15 +39,59 @@ class App extends React.Component{
     render() {
         return(
             <main className='App'>
-                <h1>The Lists</h1>
-                <Form />
-                <GroceryItems
-                    groceryItems={this.state.groceryItems}
+                <Route exact path='/' render={() => {
+                    return (
+                        <div>
+                            <h1>The Lists</h1>
+                            <Link to='/groceries'>Grocery List</Link>
+                            <br/>
+                            <Link to='/whitneys-wish-list'>Whitney's Wish List</Link>
+                            <br/>
+                            <Link to='/eddies-wish-list'>Eddie's Wish List</Link>
+                        </div>
+                    )
+                }}
+                />
+
+                <Route path='/groceries' render={() => {
+                    return (
+                        <div>
+                            <Link to='/'>Home</Link>
+                            <Form />
+                            <GroceryItems
+                            groceryItems={this.state.groceryItems}
+                            />
+                        </div>
+                    )
+                }}
+                />
+                 <Route path='/whitneys-wish-list' render={() => {
+                    return (
+                        <div>
+                            <Link to='/'>Home</Link>
+                            <Form />
+                            {/* <GroceryItems
+                            whitWishList={this.state.whitWishList}
+                            /> */}
+                        </div>
+                    )
+                }}
+                />
+                <Route path='/eddies-wish-list' render={() => {
+                    return (
+                        <div>
+                            <Link to='/'>Home</Link>
+                            <Form />
+                            {/* <GroceryItems
+                            whitWishList={this.state.whitWishList}
+                            /> */}
+                        </div>
+                    )
+                }}
                 />
             </main>
         )
     }
 }
-
 
 export default App

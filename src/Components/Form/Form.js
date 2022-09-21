@@ -9,7 +9,7 @@ class Form extends React.Component{
             description:''
         }
     }
-    
+
     render() {
         return(
             <form>
@@ -21,6 +21,5 @@ class Form extends React.Component{
         )
     }
 }
-
 
 export default Form
