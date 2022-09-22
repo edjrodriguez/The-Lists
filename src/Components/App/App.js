@@ -26,6 +26,8 @@ class App extends React.Component{
                     err: "Bad data from server. Refresh or try again later",
                   })
               throw new Error("Sorry, there was an error posting your information.");
+            } else {
+                response.json()
             }
             fetchLists()
             .then((response) => {
