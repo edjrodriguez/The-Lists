@@ -1,6 +1,5 @@
 import React from "react";
 import { Route } from "react-router-dom"
-import { v4 as uuidV4 } from "uuid"
 
 class Form extends React.Component{
     constructor() {
@@ -25,7 +24,6 @@ class Form extends React.Component{
     submitItem = (event) => {
         event.preventDefault()
         const newItem = {
-            id: uuidV4(),
             ...this.state
         }
         this.props.addItem(newItem)
@@ -66,6 +64,7 @@ class Form extends React.Component{
                             onChange={this.handleChange}
                         />
                         <input
+                            required
                             type="text"
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
@@ -95,6 +94,7 @@ class Form extends React.Component{
                             onChange={this.handleChange}
                         />
                         <input
+                            required
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
@@ -122,6 +122,7 @@ class Form extends React.Component{
                             onChange={this.handleChange}
                         />
                         <input
+                            required
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}

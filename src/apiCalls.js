@@ -10,4 +10,13 @@ let fetchLists = () =>
       }
     })
 
-export { fetchLists } 
+
+let postItem = (newItem) => 
+ fetch(customHost, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newItem)
+    })
+ 
+
+export { fetchLists, postItem } 
