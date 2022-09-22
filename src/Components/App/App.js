@@ -1,10 +1,11 @@
 import React from 'react'
-import { Route, Link } from "react-router-dom"
+import { Route, Link, Redirect } from "react-router-dom"
 import Form from '../Form/Form'
 import GroceryItems from '../ItemContainer/GroceryItems'
+import ErrorPage from '../ErrorPage/ErrorPage'
 import WhitsItems from '../ItemContainer/WhitsItems'
 import EddiesItems from '../ItemContainer/EddiesItems'
-import { fetchLists } from "../../apiCalls"
+import { fetchLists, postItem } from "../../apiCalls"
 
 class App extends React.Component{
     constructor() {
@@ -13,37 +14,39 @@ class App extends React.Component{
             groceryItems: [],
             whitWishList: [],
             eddieWishList: [],
-            error: null
+            err: null
         }
     }
 
     addItem = (newItem) => {
-        if(newItem.groceryItem) {
-            this.setState({
-                groceryItems: [
-                    ...this.state.groceryItems,
-                    newItem
-                ]
-            })
-        } else if(newItem.whitneyItem) {
-            this.setState({
-                whitWishList: [
-                    ...this.state.whitWishList,
-                    newItem
-                ]
-            })
-        } else if(newItem.eddieItem) {
-            this.setState({
-                eddieWishList: [
-                    ...this.state.eddieWishList,
-                    newItem
-                ]
-            })
-        }
+        postItem(newItem)
+        .then((response) => {
+            if(!response.ok) {
+                this.setState({
+                    err: "Bad data from server. Refresh or try again later",
+                  })
+              throw new Error("Sorry, there was an error posting your information.");
+            }
+            fetchLists()
+            .then((response) => {
+                const groceryList = response.groceries
+                const wWishList = response.whitWishList
+                const eWishList =  response.eddieWishList
+                this.setState({
+                    groceryItems: groceryList,
+                    whitWishList: wWishList,
+                    eddieWishList: eWishList,
+                })
+              })
+              .catch((error) => {
+                this.setState({
+                  err: error + "Bad data from server. Refresh or try again later",
+                })
+              })
+          });
     }
 
     componentDidMount() {
-        console.log('working')
         fetchLists()
         .then((response) => {
             const groceryList = response.groceries
@@ -62,36 +65,11 @@ class App extends React.Component{
           })
     }
 
-    addItem = (newItem) => {
-        if(newItem.groceryItem) {
-            this.setState({
-                groceryItems: [
-                    ...this.state.groceryItems,
-                    newItem
-                ]
-            })
-        } else if(newItem.whitneyItem) {
-            this.setState({
-                whitWishList: [
-                    ...this.state.whitWishList,
-                    newItem
-                ]
-            })
-        } else if(newItem.eddieItem) {
-            this.setState({
-                eddieWishList: [
-                    ...this.state.eddieWishList,
-                    newItem
-                ]
-            })
-        }
-    }
-        
-    
 
     render() {
         return(
             <main className='App'>
+                {this.state.err && <Redirect to='/error' />}
                 <Route exact path='/' render={() => {
                     return (
                         <div>
@@ -143,6 +121,19 @@ class App extends React.Component{
                         </div>
                     )
                 }}/>
+                 <Route path='/error' render={() => {
+                    return (
+                        <div>
+                            <Link to='/'>Home</Link>
+                            <ErrorPage 
+                            message={this.state.err}
+                            />
+                        </div>
+                    )
+                }}/>
+                {/* <Route path='*'>
+                        <h1>404: Not found</h1>
+                </Route> */}
             </main>
         )
     }

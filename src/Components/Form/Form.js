@@ -66,6 +66,7 @@ class Form extends React.Component{
                             onChange={this.handleChange}
                         />
                         <input
+                            required
                             type="text"
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
@@ -95,6 +96,7 @@ class Form extends React.Component{
                             onChange={this.handleChange}
                         />
                         <input
+                            required
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
@@ -122,6 +124,7 @@ class Form extends React.Component{
                             onChange={this.handleChange}
                         />
                         <input
+                            required
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
