@@ -1,7 +1,7 @@
 import React from "react";
 import GroceryCard from "../ItemCards/GroceryCard";
 
-const GroceryItems = ({ groceryItems }) => {
+const GroceryItems = ({ groceryItems, deleteItem }) => {
     let groceryCards = groceryItems.map(grocery => {
         const { id, groceryItem, quantity, description } = grocery
         return(
@@ -11,6 +11,7 @@ const GroceryItems = ({ groceryItems }) => {
                 item={groceryItem}
                 quantity={quantity}
                 description={description}
+                deleteItem={deleteItem}
             />
         )
     })

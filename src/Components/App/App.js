@@ -1,11 +1,11 @@
 import React from 'react'
-import { Route, Link, Redirect } from "react-router-dom"
+import { Route, Link, Redirect, Switch } from "react-router-dom"
 import Form from '../Form/Form'
 import GroceryItems from '../ItemContainer/GroceryItems'
 import ErrorPage from '../ErrorPage/ErrorPage'
 import WhitsItems from '../ItemContainer/WhitsItems'
 import EddiesItems from '../ItemContainer/EddiesItems'
-import { fetchLists, postItem } from "../../apiCalls"
+import { fetchLists, postItem, deleteData } from "../../apiCalls"
 
 class App extends React.Component{
     constructor() {
@@ -18,6 +18,26 @@ class App extends React.Component{
         }
     }
 
+    deleteItem = (id) => {
+        deleteData(id)
+        .then(() => {
+            fetchLists()
+                .then((response) => {
+                    this.updateAppState(response)
+                })
+                .catch((error) => {
+                this.setState({
+                    err: error + ". Bad data from server. Refresh or try again later",
+                })
+            })
+        })
+        .catch((error) => {
+            this.setState({
+                err: error + ". Problem with deleting data",
+            })
+        }) 
+    }
+
     addItem = (newItem) => {
         postItem(newItem)
         .then(() => {
@@ -27,13 +47,13 @@ class App extends React.Component{
                 })
                 .catch((error) => {
                 this.setState({
-                    err: error + "Bad data from server. Refresh or try again later",
+                    err: error + ". Bad data from server. Refresh or try again later",
                 })
             })
         })
         .catch((error) => {
             this.setState({
-                err: error + "Bad data from server. Refresh or try again later",
+                err: error + ". Bad data from server. Refresh or try again later",
             })
         })
     }
@@ -45,7 +65,7 @@ class App extends React.Component{
         })
         .catch((error) => {
             this.setState({
-                err: error + "Bad data from server. Refresh or try again later",
+                err: error + ". Bad data from server. Refresh or try again later",
             })
         })
     }
@@ -65,70 +85,80 @@ class App extends React.Component{
         return(
             <main className='App'>
                 {this.state.err && <Redirect to='/error' />}
+                <Switch>
                 <Route exact path='/' render={() => {
                     return (
                         <div>
                             <h1>The Lists</h1>
-                            <Link to='/groceries'>Grocery List</Link>
+                            <Link to='/groceries'><h3 className='grocery-btn'>Grocery List</h3></Link>
                             <br/>
-                            <Link to='/whitneys-wish-list'>Whitney's Wish List</Link>
+                            <Link to='/whitneys-wish-list'><h3 className='w-wishList-btn'>Whitney's Wish List</h3></Link>
                             <br/>
-                            <Link to='/eddies-wish-list'>Eddie's Wish List</Link>
+                            <Link to='/eddies-wish-list'><h3 className='e-wishList-btn'>Eddie's Wish List</h3></Link>
                         </div>
                     )
                 }}/>
-                <Route path='/groceries' render={() => {
+                <Route exact path='/groceries' render={() => {
                     return (
                         <div>
-                            <Link to='/'>Home</Link>
+                            <Link to='/'><h3>Home</h3></Link>
                             <Form 
                                 addItem={this.addItem}
                             />
                             <GroceryItems
-                            groceryItems={this.state.groceryItems}
+                                deleteItem={this.deleteItem}
+                                groceryItems={this.state.groceryItems}
                             />
                         </div>
                     )
                 }}/>
-                 <Route path='/whitneys-wish-list' render={() => {
+                 <Route exact path='/whitneys-wish-list' render={() => {
                     return (
                         <div>
-                            <Link to='/'>Home</Link>
+                            <Link to='/'><h3>Home</h3></Link>
                             <Form 
                                 addItem={this.addItem}
                             />
                             <WhitsItems
-                            whitWishList={this.state.whitWishList}
+                                deleteItem={this.deleteItem}
+                                whitWishList={this.state.whitWishList}
                             />
                         </div>
                     )
                 }}/>
-                <Route path='/eddies-wish-list' render={() => {
+                <Route exact path='/eddies-wish-list' render={() => {
                     return (
                         <div>
-                            <Link to='/'>Home</Link>
+                            <Link to='/'><h3>Home</h3></Link>
                             <Form 
                                 addItem={this.addItem}
                             />
                             <EddiesItems
+                                deleteItem={this.deleteItem}
                                 eddieWishList={this.state.eddieWishList}
                             />
                         </div>
                     )
                 }}/>
-                 <Route path='/error' render={() => {
+                 <Route exact path='/error' render={() => {
                     return (
                         <div>
-                            <Link to='/'>Home</Link>
+                            <Link to='/'><h3>Home</h3></Link>
                             <ErrorPage 
-                            message={this.state.err}
+                                message={this.state.err}
                             />
                         </div>
                     )
                 }}/>
-                {/* <Route path='*'>
-                        <h1>404: Not found</h1>
-                </Route> */}
+                <Route path='*' render={() => {
+                    return(
+                        <div>
+                            <Link to='/'><h3>Home</h3></Link>
+                            <h1>404: Not found</h1>
+                        </div>
+                    )
+                }}/>
+                </Switch>
             </main>
         )
     }

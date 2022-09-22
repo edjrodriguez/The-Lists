@@ -1,7 +1,7 @@
 import React from "react";
 import WishCard from "../ItemCards/WishCard";
 
-const EddiesItems = ({ eddieWishList }) => {
+const EddiesItems = ({ eddieWishList, deleteItem }) => {
     let wishCards = eddieWishList.map(wish => {
         const { id, eddieItem, link, description } = wish
         return(
@@ -11,6 +11,7 @@ const EddiesItems = ({ eddieWishList }) => {
                 item={eddieItem}
                 link={link}
                 description={description}
+                deleteItem={deleteItem}
             />
         )
     })
