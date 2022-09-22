@@ -17,6 +17,13 @@ let postItem = (newItem) =>
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newItem)
     })
- 
+    .then((response) => {
+      if(!response.ok) {
+        throw new Error(response.statusText);
+    } else {
+      return response.json()
+    }
+  }) 
 
+  
 export { fetchLists, postItem } 
