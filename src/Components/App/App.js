@@ -20,54 +20,47 @@ class App extends React.Component{
 
     addItem = (newItem) => {
         postItem(newItem)
-        .then((response) => {
-            if(!response.ok) {
-                this.setState({
-                    err: "Bad data from server. Refresh or try again later",
-                  })
-              throw new Error("Sorry, there was an error posting your information.");
-            } else {
-                response.json()
-            }
+        .then(() => {
             fetchLists()
-            .then((response) => {
-                const groceryList = response.groceries
-                const wWishList = response.whitWishList
-                const eWishList =  response.eddieWishList
-                this.setState({
-                    groceryItems: groceryList,
-                    whitWishList: wWishList,
-                    eddieWishList: eWishList,
+                .then((response) => {
+                    this.updateAppState(response)
                 })
-              })
-              .catch((error) => {
+                .catch((error) => {
                 this.setState({
-                  err: error + "Bad data from server. Refresh or try again later",
+                    err: error + "Bad data from server. Refresh or try again later",
                 })
-              })
-          });
+            })
+        })
+        .catch((error) => {
+            this.setState({
+                err: error + "Bad data from server. Refresh or try again later",
+            })
+        })
     }
-
+    
     componentDidMount() {
         fetchLists()
         .then((response) => {
-            const groceryList = response.groceries
-            const wWishList = response.whitWishList
-            const eWishList =  response.eddieWishList
+            this.updateAppState(response)
+        })
+        .catch((error) => {
             this.setState({
-                groceryItems: groceryList,
-                whitWishList: wWishList,
-                eddieWishList: eWishList,
+                err: error + "Bad data from server. Refresh or try again later",
             })
-          })
-          .catch((err) => {
-            this.setState({
-              error: err + ". Bad data from server. Refresh or try again later",
-            })
-          })
+        })
     }
-
-
+    
+    updateAppState = (response) => {
+        const groceryList = response.groceries
+        const wWishList = response.whitWishList
+        const eWishList =  response.eddieWishList
+        this.setState({
+            groceryItems: groceryList,
+            whitWishList: wWishList,
+            eddieWishList: eWishList,
+        })
+    }
+    
     render() {
         return(
             <main className='App'>
