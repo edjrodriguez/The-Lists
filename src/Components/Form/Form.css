@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+    padding-top: 10%;
+}
+
+.item-input {
+    border-radius: 10px;
+    height: 8vh;
+    width: 60vw;
+    margin: 10%;
+}
+
+.add-item {
+    border-radius: 10px;
+    height: 5.65vh;
+    width: 47vw;
+    margin: 10%;
+
+}

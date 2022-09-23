@@ -1,5 +1,6 @@
 .item-container {
     margin-top: 3%;
+    margin-left: 2%;
     border: 5px black solid;
     overflow-y: scroll;
     height: 70vh;

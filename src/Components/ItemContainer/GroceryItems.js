@@ -4,7 +4,7 @@ import './ItemContainer.css'
 
 const GroceryItems = ({ groceryItems, deleteItem }) => {
     const style = {
-        backgroundColor: '#ecc261'
+        backgroundColor: '#eccc80'
     }
 
     let groceryCards = groceryItems.map(grocery => {
