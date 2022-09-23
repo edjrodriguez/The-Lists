@@ -106,8 +106,9 @@ class App extends React.Component{
                 }}/>
                 <Route exact path='/groceries' render={() => {
                     return (
-                        <div>
-                            <Link to='/'><h3>Home</h3></Link>
+                        <div className='grocery-page'>
+                            <Link to='/'><h3 className='home-button'>Home</h3></Link>
+                            <div className='form-and-list'>
                             <Form 
                                 addItem={this.addItem}
                             />
@@ -115,13 +116,16 @@ class App extends React.Component{
                                 deleteItem={this.deleteItem}
                                 groceryItems={this.state.groceryItems}
                             />
+                            </div>
                         </div>
                     )
                 }}/>
                  <Route exact path='/whitneys-wish-list' render={() => {
                     return (
-                        <div>
-                            <Link to='/'><h3>Home</h3></Link>
+                        <div className='whits-page'>
+                            <Link to='/'><h3 className='home-button'>Home</h3></Link>
+                            <div className='form-and-list'>
+
                             <Form 
                                 addItem={this.addItem}
                             />
@@ -129,13 +133,16 @@ class App extends React.Component{
                                 deleteItem={this.deleteItem}
                                 whitWishList={this.state.whitWishList}
                             />
+                            </div>
                         </div>
                     )
                 }}/>
                 <Route exact path='/eddies-wish-list' render={() => {
                     return (
-                        <div>
-                            <Link to='/'><h3>Home</h3></Link>
+                        <div className='eddies-page'>
+                            <Link to='/'><h3 className='home-button'>Home</h3></Link>
+                            <div className='form-and-list'>
+
                             <Form 
                                 addItem={this.addItem}
                             />
@@ -143,13 +150,14 @@ class App extends React.Component{
                                 deleteItem={this.deleteItem}
                                 eddieWishList={this.state.eddieWishList}
                             />
+                            </div>
                         </div>
                     )
                 }}/>
                  <Route exact path='/error' render={() => {
                     return (
                         <div>
-                            <Link to='/'><h3>Home</h3></Link>
+                            <Link to='/'><h3 className='home-button'>Home</h3></Link>
                             <ErrorPage 
                                 message={this.state.err}
                             />
@@ -159,7 +167,7 @@ class App extends React.Component{
                 <Route path='*' render={() => {
                     return(
                         <div>
-                            <Link to='/'><h3>Home</h3></Link>
+                            <Link to='/'><h3 className='home-button'>Home</h3></Link>
                             <h1>404: Not found</h1>
                         </div>
                     )

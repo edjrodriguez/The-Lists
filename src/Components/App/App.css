@@ -1,7 +1,7 @@
 .App {
     border: red 5px solid;
     height: 100vh;
-    width: 98vw;
+    width: 100vw;
 }
 
 .main-page {
@@ -12,6 +12,7 @@
     display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+    text-decoration: none;
 }
 
 .header {
@@ -22,10 +23,14 @@
     display: flex;
 	flex-direction: column;
     margin-left: 4% ;
+
 }
 
-
 .grocery-btn {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
     border-radius: 10px;
     border: solid #fab005 2px;
     color:white;
@@ -44,8 +49,11 @@
 }
 
 .w-wishList-btn{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
     border-radius: 10px;
-    border: solid #7950f2 2px;
     text-decoration: none;
     color:white;
     text-decoration: none;
@@ -58,8 +66,11 @@
 }
 
 .e-wishList-btn{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
     border-radius: 10px;
-    border: solid #ced4da 2px;
     text-decoration: none;
     color:Black;
     text-decoration: none;
@@ -70,4 +81,52 @@
     text-align: center;
     box-shadow: 2px 1px 2px 1px black;
 }
+
+.home-button {
+    margin-top: 0;
+    padding: 33px;
+    font-size: 33px;
+    border: #ced4da solid 1px;
+    width: 6%;
+    margin-bottom: 3%;
+    background: #15aabf;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    color: white;
+    text-decoration: none;
+}
+
+.grocery-page {
+    border: rgb(208, 255, 0) 5px solid;
+    background-color: #fab005;
+    /* background: #ecc261; */
+
+    height: 98vh;
+    width: 100vw;
+}
+
+.form-and-list {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin-right:2%;
+
+}
+
+.whits-page {
+    background: #7950f2;
+   
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.eddies-page {
+    padding: 15px;
+    background: #ced4da;
+    height: 100vh;
+    width: 100%;
+}
+
+
 
