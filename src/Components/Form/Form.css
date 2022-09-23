@@ -4,20 +4,47 @@
 	justify-content: center;
 	align-items: center;
 
-    padding-top: 10%;
+    padding-top: 3%;
 }
 
 .item-input {
     border-radius: 10px;
-    height: 8vh;
+    height: 7vh;
     width: 60vw;
-    margin: 10%;
+    margin: 2%;
 }
 
-.add-item {
+.add-whitney {
     border-radius: 10px;
     height: 5.65vh;
     width: 47vw;
-    margin: 10%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    color: black;
+    font-size:xx-large;
+    background-color: #fab005;
+
+}
+
+.add-eddie {
+    border-radius: 10px;
+    height: 5.65vh;
+    width: 47vw;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    color: white;
+    font-size:xx-large;
+    background: #7950f2;
+
+}
+
+.add-grocery {
+    border-radius: 10px;
+    height: 5.65vh;
+    width: 47vw;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    color: black;
+    font-size:xx-large
 
 }

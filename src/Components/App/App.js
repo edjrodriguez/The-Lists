@@ -107,7 +107,7 @@ class App extends React.Component{
                 <Route exact path='/groceries' render={() => {
                     return (
                         <div className='grocery-page'>
-                            <Link to='/'><h3 className='home-button'>Home</h3></Link>
+                           <Link to='/' ><h3 className='home-button'>Home</h3></Link>
                             <div className='form-and-list'>
                             <Form 
                                 addItem={this.addItem}
