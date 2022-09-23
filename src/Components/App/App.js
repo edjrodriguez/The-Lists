@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import { Route, Link, Redirect, Switch } from "react-router-dom"
 import Form from '../Form/Form'
 import GroceryItems from '../ItemContainer/GroceryItems'
@@ -88,13 +89,18 @@ class App extends React.Component{
                 <Switch>
                 <Route exact path='/' render={() => {
                     return (
-                        <div>
-                            <h1>The Lists</h1>
-                            <Link to='/groceries'><h3 className='grocery-btn'>Grocery List</h3></Link>
+                        <div className='main-page'>
+                            <h1 className='header'>The Lists</h1>
+                            <div className='top-btns'>
+
+                            <Link to='/groceries'><h1 className='grocery-btn'>Grocery List</h1></Link>
+                            </div>
+                            <br/>
+                            <div className='bottom-btns'>
+                            <Link to='/eddies-wish-list'><h3 className='e-wishList-btn'>Eddie's Wish List</h3></Link>
                             <br/>
                             <Link to='/whitneys-wish-list'><h3 className='w-wishList-btn'>Whitney's Wish List</h3></Link>
-                            <br/>
-                            <Link to='/eddies-wish-list'><h3 className='e-wishList-btn'>Eddie's Wish List</h3></Link>
+                            </div>
                         </div>
                     )
                 }}/>

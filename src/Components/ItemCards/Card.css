@@ -1,5 +1,16 @@
 .grocery-card {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
     border: 1px black solid;
-    width: 45%;
+    width: 80%;
     margin: 2%;
+    background: white;
+    border-radius: 10px;
+    border: grey 1.5px solid;
+    box-shadow: 2px 1px 2px 1px;
 }

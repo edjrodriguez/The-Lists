@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom"
+import './Form.css'
 
 class Form extends React.Component{
     constructor() {
