@@ -1,17 +1,18 @@
 .App {
-    border: red 5px solid;
+    /* border: red 5px solid; */
     height: 100vh;
-    width: 98vw;
+    width: 100vw;
 }
 
 .main-page {
-    border: rgb(208, 255, 0) 5px solid;
-    background: #15aabf;
+    /* border: rgb(208, 255, 0) 5px solid; */
+    background: #126975;
     height: 100vh;
     width: 100vw;
     display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+    text-decoration: none;
 }
 
 .header {
@@ -22,10 +23,14 @@
     display: flex;
 	flex-direction: column;
     margin-left: 4% ;
+
 }
 
-
 .grocery-btn {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
     border-radius: 10px;
     border: solid #fab005 2px;
     color:white;
@@ -34,7 +39,9 @@
     width: 90vw;
     background: #fab005;
     text-align: center;
+    border: black 2px solid;
     box-shadow: 2px 1px 2px 1px black;
+
 }
 
 .bottom-btns {
@@ -44,13 +51,16 @@
 }
 
 .w-wishList-btn{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
     border-radius: 10px;
-    border: solid #7950f2 2px;
     text-decoration: none;
     color:white;
     text-decoration: none;
     height: 20vh;
-    width: 30vw;
+    width: 40vw;
     margin: 0;
     background: #7950f2;
     text-align: center;
@@ -58,16 +68,71 @@
 }
 
 .e-wishList-btn{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
     border-radius: 10px;
-    border: solid #ced4da 2px;
     text-decoration: none;
     color:Black;
     text-decoration: none;
     height: 20vh;
-    width: 30vw;
+    width: 40vw;
     margin: 0;
     background: #ced4da;
     text-align: center;
     box-shadow: 2px 1px 2px 1px black;
 }
+
+.home-button {
+    margin-top: 0;
+    padding: 15px;
+    font-size: 23px;
+    border: #ced4da solid 1px;
+    width: 16%;
+    height: 3%;
+    margin-bottom: 3%;
+    /* background: #15aabf; */
+    background: #126975;
+
+    border-radius: 8px 10px 10px 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.grocery-page {
+    /* border: rgb(208, 255, 0) 5px solid; */
+    background-color: #fab005;
+    /* background: #eccc80; */
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.form-and-list {
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin-right:2%;
+
+}
+
+.whits-page {
+    background: #7950f2;
+   
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.eddies-page {
+    /* padding: 15px; */
+    background: #ced4da;
+    height: 100vh;
+    width: 100%;
+}
+
+
 

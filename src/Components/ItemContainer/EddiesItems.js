@@ -1,7 +1,12 @@
 import React from "react";
 import WishCard from "../ItemCards/WishCard";
+import './ItemContainer.css'
 
 const EddiesItems = ({ eddieWishList, deleteItem }) => {
+    const style = {
+        background: "#868e96"
+    }
+
     let wishCards = eddieWishList.map(wish => {
         const { id, eddieItem, link, description } = wish
         return(
@@ -17,7 +22,7 @@ const EddiesItems = ({ eddieWishList, deleteItem }) => {
     })
     
     return(
-        <div className="grocery-list-container">
+        <div style={style} className="grocery-list-container item-container">
             {wishCards}
         </div>
     )

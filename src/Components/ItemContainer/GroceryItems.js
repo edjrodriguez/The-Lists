@@ -1,7 +1,12 @@
 import React from "react";
 import GroceryCard from "../ItemCards/GroceryCard";
+import './ItemContainer.css'
 
 const GroceryItems = ({ groceryItems, deleteItem }) => {
+    const style = {
+        backgroundColor: '#eccc80'
+    }
+
     let groceryCards = groceryItems.map(grocery => {
         const { id, groceryItem, quantity, description } = grocery
         return(
@@ -17,7 +22,7 @@ const GroceryItems = ({ groceryItems, deleteItem }) => {
     })
     
     return(
-        <div className="grocery-list-container">
+        <div style={style} className="grocery-list-container item-container">
             {groceryCards}
         </div>
     )

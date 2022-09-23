@@ -47,9 +47,10 @@ class Form extends React.Component{
         <div>
             <Route path='/groceries' render={() => {
                 return(
-                    <form>
+                    <form className="form">
                         <input
                             required
+                            className="item-input"
                             type="text"
                             placeholder="Grocery Item"
                             name='groceryItem'
@@ -58,6 +59,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
+                            className="item-input"
                             type="text"
                             placeholder="How many?"
                             name='quantity'
@@ -66,21 +68,25 @@ class Form extends React.Component{
                         />
                         <input
                             required
+                            className="item-input"
                             type="text"
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
-                        <button onClick={(event) => this.submitItem(event)}>Add to list</button>
+                        ____________________________________
+                        <button className="add-grocery" onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
             <Route path='/whitneys-wish-list' render={() => {
                 return(
-                    <form>
+                    <form className="form">
                          <input 
                             required
+                            className="item-input"
+
                             placeholder="Item"
                             name='whitneyItem'
                             value={this.state.whitneyItem}
@@ -89,6 +95,8 @@ class Form extends React.Component{
                         />
                         <input
                             required
+                            className="item-input"
+
                             placeholder="Link?"
                             name='link'
                             value={this.state.link}
@@ -96,20 +104,25 @@ class Form extends React.Component{
                         />
                         <input
                             required
+                            className="item-input"
+
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
-                        <button onClick={(event) => this.submitItem(event)}>Add to list</button>
+                        ____________________________________
+                        <button className="add-whitney" onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
               <Route path={'/eddies-wish-list' } render={() => {
                 return(
-                    <form>
+                    <form className="form">
                         <input
                             required 
+                            className="item-input"
+
                             placeholder="Item"
                             name='eddieItem'
                             value={this.state.eddieItem}
@@ -117,6 +130,8 @@ class Form extends React.Component{
                         />
                         <input
                             required
+                            className="item-input"
+
                             placeholder="Link?"
                             name='link'
                             value={this.state.link}
@@ -124,12 +139,15 @@ class Form extends React.Component{
                         />
                         <input
                             required
+                            className="item-input"
+
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
-                        <button onClick={(event) => this.submitItem(event)}>Add to list</button>
+                        ____________________________________
+                        <button className="add-eddie" onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
