@@ -89,15 +89,17 @@ class App extends React.Component{
                 <Switch>
                 <Route exact path='/' render={() => {
                     return (
-                        <div>
+                        <div className='main-page'>
                             <h1 className='header'>The Lists</h1>
+                            <div className='top-btns'>
+
                             <Link to='/groceries'><h1 className='grocery-btn'>Grocery List</h1></Link>
+                            </div>
                             <br/>
                             <div className='bottom-btns'>
                             <Link to='/eddies-wish-list'><h3 className='e-wishList-btn'>Eddie's Wish List</h3></Link>
                             <br/>
                             <Link to='/whitneys-wish-list'><h3 className='w-wishList-btn'>Whitney's Wish List</h3></Link>
-
                             </div>
                         </div>
                     )

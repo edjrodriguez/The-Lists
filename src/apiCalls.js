@@ -1,7 +1,8 @@
-const customHost = "http://localhost:3001/lists/"
+// const customHost = "http://localhost:3001/lists/"
+const herokuHost = "https://pure-sands-51403.herokuapp.com/lists/"
 
 let fetchLists = () => 
-    fetch(customHost)
+    fetch(herokuHost)
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
@@ -12,7 +13,7 @@ let fetchLists = () =>
 
 
 let postItem = (newItem) => 
-  fetch(customHost, {
+  fetch(herokuHost, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newItem)
@@ -26,7 +27,7 @@ let postItem = (newItem) =>
 }) 
 
   let deleteData = (id) => 
-    fetch(`http://localhost:3001/lists/${id}`, {
+    fetch(`https://pure-sands-51403.herokuapp.com/lists/${id}`, {
             method: 'DELETE'
     })
     .then((response) => {
