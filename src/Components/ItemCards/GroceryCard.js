@@ -3,7 +3,7 @@ import './Card.css'
 
 const GroceryCard = ({ id, item, quantity, description, deleteItem }) => {
     return(
-        <div className="grocery-card">
+        <div className="card">
             <div className="item-name-container">
                 <h5>{item}</h5>
             </div>
