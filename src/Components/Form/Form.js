@@ -70,13 +70,14 @@ class Form extends React.Component{
                             required
                             className="item-input"
                             type="text"
+                            maxLength='60'
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
                         ____________________________________
-                        <button className="add-grocery" onClick={(event) => this.submitItem(event)}>Add to list</button>
+                        <button className="add-grocery" disabled={!this.state.groceryItem || !this.state.quantity || !this.state.description} onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
@@ -97,7 +98,7 @@ class Form extends React.Component{
                             required
                             className="item-input"
 
-                            placeholder="Link?"
+                            placeholder="Link"
                             name='link'
                             value={this.state.link}
                             onChange={this.handleChange}
@@ -105,14 +106,14 @@ class Form extends React.Component{
                         <input
                             required
                             className="item-input"
-
+                            maxLength='60'
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
                         ____________________________________
-                        <button className="add-whitney" onClick={(event) => this.submitItem(event)}>Add to list</button>
+                        <button className="add-whitney" disabled={!this.state.whitneyItem || !this.state.link || !this.state.description} onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>
@@ -122,7 +123,7 @@ class Form extends React.Component{
                         <input
                             required 
                             className="item-input"
-
+                            
                             placeholder="Item"
                             name='eddieItem'
                             value={this.state.eddieItem}
@@ -132,7 +133,7 @@ class Form extends React.Component{
                             required
                             className="item-input"
 
-                            placeholder="Link?"
+                            placeholder="Link"
                             name='link'
                             value={this.state.link}
                             onChange={this.handleChange}
@@ -140,14 +141,14 @@ class Form extends React.Component{
                         <input
                             required
                             className="item-input"
-
+                            maxLength='60'
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
                             value={this.state.description}
                             onChange={this.handleChange}
                         />
                         ____________________________________
-                        <button className="add-eddie" onClick={(event) => this.submitItem(event)}>Add to list</button>
+                        <button className="add-eddie" disabled={!this.state.eddieItem || !this.state.link || !this.state.description} onClick={(event) => this.submitItem(event)}>Add to list</button>
                     </form>
                 )
             }}/>

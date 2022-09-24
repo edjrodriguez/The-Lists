@@ -17,13 +17,16 @@
 
 .header {
     margin-top: 0;
+    color: white;
+    margin-left: 22%;
+    text-decoration: underline;
+    font-size: 350%;
 }
 
 .top-btns {
     display: flex;
 	flex-direction: column;
     margin-left: 4% ;
-
 }
 
 .grocery-btn {
@@ -103,10 +106,7 @@
 }
 
 .grocery-page {
-    /* border: rgb(208, 255, 0) 5px solid; */
     background-color: #fab005;
-    /* background: #eccc80; */
-
     height: 100vh;
     width: 100vw;
 }
@@ -116,19 +116,15 @@
 	flex-direction: column;
     align-items: center;
     margin-right:2%;
-
 }
 
 .whits-page {
     background: #7950f2;
-   
-
     height: 100vh;
     width: 100vw;
 }
 
 .eddies-page {
-    /* padding: 15px; */
     background: #ced4da;
     height: 100vh;
     width: 100%;

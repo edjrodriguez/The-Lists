@@ -4,10 +4,18 @@ import './Card.css'
 const WishCard = ({ id, item, link, description, deleteItem }) => {
     return(
         <div className="grocery-card">
-            <h3>{item}</h3>
-            {link ? <label>Link: <a href={link}>{link}</a></label> : <p>No link provided</p>}
-            {description ? <h5>Notes: {description}</h5> : <p></p>}
-            <button onClick={() => deleteItem(id)}>Remove Item</button>
+            <div className="item-name-container">
+                <h5>{item}</h5>
+            </div>
+            <div className="link-or-qty-container">
+                {link ? <a href={link}>Link</a> : <a href={`https://www.google.com/search?q=${item}`}>Link</a>}
+            </div>
+            <div className="notes-container">
+                {description ? <h5 className="notes">   Notes: <br/><br/>{description}</h5> : <p></p>}
+            </div>
+            <div className="delete-btn-container">
+                <button onClick={() => deleteItem(id)}>🗑</button>
+            </div>
         </div>
     )
 
