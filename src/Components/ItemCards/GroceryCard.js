@@ -14,7 +14,7 @@ const GroceryCard = ({ id, item, quantity, description, deleteItem }) => {
                 {description ? <h5 className="notes">Notes: <br/><br/>{description}</h5> : <h5 className="notes">Notes: <br/> <br/> N/A </h5>}
             </div>
             <div className="delete-btn-container">
-                <button onClick={() => deleteItem(id)}>🗑</button>
+                <button className="delete-btn" onClick={() => deleteItem(id)}>🗑</button>
             </div>
         </div>
     )

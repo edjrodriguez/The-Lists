@@ -14,7 +14,7 @@ const WishCard = ({ id, item, link, description, deleteItem }) => {
                 {description ? <h5 className="notes">   Notes: <br/><br/>{description}</h5> : <p></p>}
             </div>
             <div className="delete-btn-container">
-                <button onClick={() => deleteItem(id)}>🗑</button>
+                <button className="delete-btn" onClick={() => deleteItem(id)}>🗑</button>
             </div>
         </div>
     )
