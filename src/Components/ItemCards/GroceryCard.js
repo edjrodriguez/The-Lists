@@ -3,7 +3,7 @@ import './Card.css'
 
 const GroceryCard = ({ id, item, quantity, description, deleteItem }) => {
     return(
-        <div className="grocery-card">
+        <div className="card">
             <div className="item-name-container">
                 <h5>{item}</h5>
             </div>
@@ -14,7 +14,7 @@ const GroceryCard = ({ id, item, quantity, description, deleteItem }) => {
                 {description ? <h5 className="notes">Notes: <br/><br/>{description}</h5> : <h5 className="notes">Notes: <br/> <br/> N/A </h5>}
             </div>
             <div className="delete-btn-container">
-                <button onClick={() => deleteItem(id)}>🗑</button>
+                <button className="delete-btn" onClick={() => deleteItem(id)}>🗑</button>
             </div>
         </div>
     )

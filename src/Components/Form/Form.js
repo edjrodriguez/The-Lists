@@ -50,7 +50,7 @@ class Form extends React.Component{
                     <form className="form">
                         <input
                             required
-                            className="item-input"
+                            className="item-input grocery-item-input"
                             type="text"
                             placeholder="Grocery Item"
                             name='groceryItem'
@@ -59,7 +59,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
-                            className="item-input"
+                            className="item-input grocery-qty-input"
                             type="text"
                             placeholder="How many?"
                             name='quantity'
@@ -68,7 +68,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
-                            className="item-input"
+                            className="item-input grocery-notes-input"
                             type="text"
                             maxLength='60'
                             placeholder="Details? Specific Brand? Specific store?"
@@ -86,8 +86,7 @@ class Form extends React.Component{
                     <form className="form">
                          <input 
                             required
-                            className="item-input"
-
+                            className="item-input whit-item-input"
                             placeholder="Item"
                             name='whitneyItem'
                             value={this.state.whitneyItem}
@@ -96,8 +95,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
-                            className="item-input"
-
+                            className="item-input whit-link-input"
                             placeholder="Link"
                             name='link'
                             value={this.state.link}
@@ -105,7 +103,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
-                            className="item-input"
+                            className="item-input whit-notes-input"
                             maxLength='60'
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
@@ -122,7 +120,7 @@ class Form extends React.Component{
                     <form className="form">
                         <input
                             required 
-                            className="item-input"
+                            className="item-input eddie-item-input"
                             
                             placeholder="Item"
                             name='eddieItem'
@@ -131,7 +129,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
-                            className="item-input"
+                            className="item-input eddie-link-input"
 
                             placeholder="Link"
                             name='link'
@@ -140,7 +138,7 @@ class Form extends React.Component{
                         />
                         <input
                             required
-                            className="item-input"
+                            className="item-input eddie-notes-input"
                             maxLength='60'
                             placeholder="Details? Specific Brand? Specific store?"
                             name='description'
