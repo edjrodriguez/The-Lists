@@ -1,7 +1,4 @@
 # The Lists 
-
-[Deployed Link](https://the-lists.herokuapp.com/)
-
 ## Abstract
 Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  Do you forget to write down the one item your partner asked you to get from the grocery store.  The Lists aims to solve this problem by putting these important lists in one place.  A simple and intutive mobile design (iPhoneXR specifically), The Lists allows you and your partner to add wish list items and groceries to stored lists that are accessible with any internet connected device.
 
@@ -10,6 +7,8 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
     * Create personas and user stories to describe a target audience.
     * Work within constraints to deliver a product for a niche audience, which helps solve a problem unique to them.
     * Ability for users to view, store, or delete the data displayed in the application 
+
+[Deployed Link](https://the-lists.herokuapp.com/)
 
 ## Local Set-Up Instructions
 * clone down the repo by running `git clone git@github.com:edjrodriguez/The-Lists.git` in the terminal
@@ -36,12 +35,12 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 https://user-images.githubusercontent.com/100659793/192145415-e92530ee-fc2b-4536-8e0c-026887fb2bbe.mov
 
 ## Future Additions 
+ * Cleaner desktop layout (currently designed for mobile)
  * Deploy server to different host such as AWS or Render (currently hosted on Heroku as a static API)
  * User can "check off" grocery items instead of deleting
  * User can see how many "active" items are in the grocery list
  * User can filter grocery items by category/department
  * User can edit items that have been added
- * Better desktop layout (currently designed for mobile)
 
 ## Members
 __________________________
