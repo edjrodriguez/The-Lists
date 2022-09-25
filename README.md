@@ -1,4 +1,4 @@
-# The Lists (showcase project)
+# The Lists 
 
 [Deployed Link]()
 
@@ -36,7 +36,7 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 https://user-images.githubusercontent.com/100659793/192145415-e92530ee-fc2b-4536-8e0c-026887fb2bbe.mov
 
 ## Future Additions 
- * Deploy server to AWS (currently hosted on Heroku as a static API)
+ * Deploy server to different host such as AWS or Render (currently hosted on Heroku as a static API)
  * User can "check off" grocery items instead of deleting
  * User can see how many "active" items are in the grocery list
  * User can filter grocery items by category/department
@@ -48,12 +48,10 @@ __________________________
 
 - Eddie Rodriguez [linkedin](https://www.linkedin.com/in/edward-rodriguez-1b497423b/)
 
-
 ## Links
 __________________________
 - [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
-- UI [GitHub](https://github.com/dstavis/tasterx)
-- [Deployed Express Server Landing Page] (https://pure-sands-51403.herokuapp.com/)
-- [Deployed Express Server Data] (https://pure-sands-51403.herokuapp.com/lists/)
-- [Express Server] (https://github.com/edjrodriguez/API-Wish-List)
+- UI [GitHub]()
+- [Deployed Express Server Data](https://pure-sands-51403.herokuapp.com/lists/)
+- [API GitHub](https://github.com/edjrodriguez/API-Wish-List)
 - [Trello Board](https://trello.com/b/psFDNxc1/wish-list-project-board)
