@@ -11,7 +11,6 @@ const postStub = {
         groceryItem: "sausage",
         quantity: "1 pack",
         description: "Kroger"
-
       }
     ],
     whitWishList: [
@@ -26,7 +25,7 @@ const postStub = {
         whitneyItem: "apple watch",
         link: "apple.com",
         description: "starlight. 41mm case"
-        } 
+      } 
     ],
     eddieWishList: [
       {
@@ -40,7 +39,7 @@ const postStub = {
         eddieItem: "Apple watch",
         link: "apple.com",
         description: "midnight.  45mm case"
-        }
+      }
     ]
   }
 

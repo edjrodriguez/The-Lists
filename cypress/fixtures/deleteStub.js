@@ -5,7 +5,6 @@ const deleteStub = {
         groceryItem: "sausage",
         quantity: "1 pack",
         description: "Kroger"
-
       }
     ],
     whitWishList: [
@@ -14,7 +13,7 @@ const deleteStub = {
         whitneyItem: "apple watch",
         link: "apple.com",
         description: "starlight. 41mm case"
-        } 
+      } 
     ],
     eddieWishList: [
       {
@@ -22,7 +21,7 @@ const deleteStub = {
         eddieItem: "Apple watch",
         link: "apple.com",
         description: "midnight.  45mm case"
-        }
+      }
     ]
   }
 

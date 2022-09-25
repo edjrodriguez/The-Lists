@@ -1,7 +1,6 @@
-import React from "react";
-import WishCard from "../ItemCards/WishCard";
+import React from "react"
+import WishCard from "../ItemCards/WishCard"
 import './ItemContainer.css'
-
 
 const WhitsItems = ({ whitWishList, deleteItem }) => {
     const style = {

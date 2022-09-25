@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import WishCard from "../ItemCards/WishCard";
 import './ItemContainer.css'
 
@@ -21,7 +21,7 @@ const EddiesItems = ({ eddieWishList, deleteItem }) => {
         )
     })
     
-    return(
+    return (
         <div style={style} className="grocery-list-container item-container">
             {wishCards}
         </div>
