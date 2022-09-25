@@ -20,7 +20,7 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 - React/JSX
 - Heroku
 - Express
-- Javascript
+- JavaScript
 - HTML/CSS
 - Cypress
 - fetch API 
@@ -35,11 +35,13 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 ## Guided Motion Feature
 https://user-images.githubusercontent.com/100659793/192145415-e92530ee-fc2b-4536-8e0c-026887fb2bbe.mov
 
-
-
 ## Future Additions 
- * Better Desktop layout (designed for mobile intitially)
-
+ * Deploy server to AWS (currently hosted on Heroku as a static API)
+ * User can "check off" grocery items instead of deleting
+ * User can see how many "active" items are in the grocery list
+ * User can filter grocery items by category/department
+ * User can edit items that have been added
+ * Better desktop layout (currently designed for mobile)
 
 ## Members
 __________________________
