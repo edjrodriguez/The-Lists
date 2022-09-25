@@ -12,7 +12,7 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
     * Ability for users to view, store, or delete the data displayed in the application 
 
 ## Local Set-Up Instructions
-* clone down the repo by running `git clone git@github.com:edjrodriguez/The-Lists.git` in the terminal//////////
+* clone down the repo by running `git clone git@github.com:edjrodriguez/The-Lists.git` in the terminal
 * run `npm install` in the terminal
 * run `npm start` in the terminal
 
@@ -51,7 +51,6 @@ __________________________
 ## Links
 __________________________
 - [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
-- UI [GitHub]()
 - [Deployed Express Server Data](https://pure-sands-51403.herokuapp.com/lists/)
 - [API GitHub](https://github.com/edjrodriguez/API-Wish-List)
 - [Trello Board](https://trello.com/b/psFDNxc1/wish-list-project-board)
