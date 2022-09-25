@@ -1,9 +1,9 @@
-Wish List a.k.a. The Lists (showcase project)
+The Lists (showcase project)
 
 [Deployed Link]()
 
 ## Abstract
-Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  Do you forget to write down the one item your partner asked you to get from the grocery store.  Wish List or The Lists aims to solve this problem by putting these important lists in one place online.  A simple and intutive design, The Lists allows you and your partner to add wish list items and groceries to stored lists that is accessible with any internet connected device.
+Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  Do you forget to write down the one item your partner asked you to get from the grocery store.  The Lists aims to solve this problem by putting these important lists in one place online.  A simple and intutive mobile design, The Lists allows you and your partner to add wish list items and groceries to stored lists that is accessible with any internet connected device.
 
 * Learning Goals and Core Functionality:
     * Demonstrate mastery of React, React Router, Asynchronous JavaScript, and E2E testing with Cypress
@@ -28,7 +28,9 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 - GitHub & Git
 
 ## Illustrated Design Mock-up
-
+<img width="300" alt="Wish List wireframe1" src="https://user-images.githubusercontent.com/100659793/192144592-8ac85fee-e807-499b-b032-549b8f67361b.png">
+<img width="300" alt="Wish List wireframe2" src="https://user-images.githubusercontent.com/100659793/192144681-4a35b956-a496-41ad-ae21-17f49b6b6314.png">
+<img width="300" alt="Wish List wireframe3" src="https://user-images.githubusercontent.com/100659793/192144753-cda8eb7c-465d-41b9-a3a0-2899e115166d.png">
 
 ## Guided Motion Feature
 
@@ -48,7 +50,7 @@ __________________________
 __________________________
 - [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
 - UI [GitHub](https://github.com/dstavis/tasterx)
-- Deployed Express Server Landing Page (https://pure-sands-51403.herokuapp.com/)
-- Deployed Express Server Data (https://pure-sands-51403.herokuapp.com/lists/)
-- Express Server (https://github.com/edjrodriguez/API-Wish-List)
-- Work ticket kanban [Trello Board](https://trello.com/b/psFDNxc1/wish-list-project-board)
+- [Deployed Express Server Landing Page] (https://pure-sands-51403.herokuapp.com/)
+- [Deployed Express Server Data] (https://pure-sands-51403.herokuapp.com/lists/)
+- [Express Server] (https://github.com/edjrodriguez/API-Wish-List)
+- [Trello Board](https://trello.com/b/psFDNxc1/wish-list-project-board)
