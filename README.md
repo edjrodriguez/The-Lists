@@ -49,6 +49,6 @@ __________________________
 ## Links
 __________________________
 - [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
-- [Deployed Express Server Data](https://pure-sands-51403.herokuapp.com/lists/)
-- [API GitHub](https://github.com/edjrodriguez/API-Wish-List)
+- [Deployed Express Server](https://pure-sands-51403.herokuapp.com/lists/)
+- [Express Server GitHub](https://github.com/edjrodriguez/API-Wish-List)
 - [Trello Board](https://trello.com/b/psFDNxc1/wish-list-project-board)
