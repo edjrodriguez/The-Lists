@@ -1,11 +1,9 @@
 .App {
-    /* border: red 5px solid; */
     height: 100vh;
     width: 100vw;
 }
 
 .main-page {
-    /* border: rgb(208, 255, 0) 5px solid; */
     background: #126975;
     height: 100vh;
     width: 100vw;
@@ -26,7 +24,7 @@
 .top-btns {
     display: flex;
 	flex-direction: column;
-    margin-left: 4% ;
+    margin-left: 4%;
 }
 
 .grocery-btn {
@@ -37,14 +35,12 @@
     border-radius: 10px;
     border: solid #fab005 2px;
     color:white;
-    text-decoration: none;
     height: 20vh;
     width: 90vw;
     background: #fab005;
     text-align: center;
     border: black 2px solid;
     box-shadow: 2px 1px 2px 1px black;
-
 }
 
 .bottom-btns {
@@ -61,7 +57,6 @@
     border-radius: 10px;
     text-decoration: none;
     color:white;
-    text-decoration: none;
     height: 20vh;
     width: 40vw;
     margin: 0;
@@ -78,7 +73,6 @@
     border-radius: 10px;
     text-decoration: none;
     color:Black;
-    text-decoration: none;
     height: 20vh;
     width: 40vw;
     margin: 0;
@@ -95,14 +89,10 @@
     width: 16%;
     height: 3%;
     margin-bottom: 3%;
-    /* background: #15aabf; */
     background: #126975;
-
     border-radius: 8px 10px 10px 10px;
     box-shadow: 2px 2px 2px 2px black;
     color: white;
-    text-decoration: none;
-    
 }
 
 .grocery-page {

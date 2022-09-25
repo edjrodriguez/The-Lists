@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import './Card.css'
 
 const WishCard = ({ id, item, link, description, deleteItem }) => {
@@ -18,7 +18,6 @@ const WishCard = ({ id, item, link, description, deleteItem }) => {
             </div>
         </div>
     )
-
 }
 
 export default WishCard

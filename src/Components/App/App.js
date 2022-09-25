@@ -92,7 +92,6 @@ class App extends React.Component{
                         <div className='main-page'>
                             <h1 className='header'>The Lists</h1>
                             <div className='top-btns'>
-
                             <Link to='/groceries'><h1 className='grocery-btn'>Grocery List</h1></Link>
                             </div>
                             <br/>
@@ -125,7 +124,6 @@ class App extends React.Component{
                         <div className='whits-page'>
                             <Link to='/'><h3 className='home-button'>Home</h3></Link>
                             <div className='form-and-list'>
-
                             <Form 
                                 addItem={this.addItem}
                             />
@@ -142,7 +140,6 @@ class App extends React.Component{
                         <div className='eddies-page'>
                             <Link to='/'><h3 className='home-button'>Home</h3></Link>
                             <div className='form-and-list'>
-
                             <Form 
                                 addItem={this.addItem}
                             />

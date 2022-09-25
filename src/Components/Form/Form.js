@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { Route } from "react-router-dom"
 import './Form.css'
 
@@ -91,7 +91,6 @@ class Form extends React.Component{
                             name='whitneyItem'
                             value={this.state.whitneyItem}
                             onChange={this.handleChange}
-                            
                         />
                         <input
                             required
@@ -120,8 +119,7 @@ class Form extends React.Component{
                     <form className="form">
                         <input
                             required 
-                            className="item-input eddie-item-input"
-                            
+                            className="item-input eddie-item-input"       
                             placeholder="Item"
                             name='eddieItem'
                             value={this.state.eddieItem}
@@ -130,7 +128,6 @@ class Form extends React.Component{
                         <input
                             required
                             className="item-input eddie-link-input"
-
                             placeholder="Link"
                             name='link'
                             value={this.state.link}

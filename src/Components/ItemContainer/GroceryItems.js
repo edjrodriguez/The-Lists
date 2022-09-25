@@ -1,5 +1,5 @@
-import React from "react";
-import GroceryCard from "../ItemCards/GroceryCard";
+import React from "react"
+import GroceryCard from "../ItemCards/GroceryCard"
 import './ItemContainer.css'
 
 const GroceryItems = ({ groceryItems, deleteItem }) => {
