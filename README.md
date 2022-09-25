@@ -33,7 +33,7 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 <img width="300" alt="Wish List wireframe3" src="https://user-images.githubusercontent.com/100659793/192144753-cda8eb7c-465d-41b9-a3a0-2899e115166d.png">
 
 ## Guided Motion Feature
-![The Lists](https://user-images.githubusercontent.com/100659793/192145306-0e995523-8503-493d-a041-536062b1a69c.mov)
+https://user-images.githubusercontent.com/100659793/192145306-0e995523-8503-493d-a041-536062b1a69c.mov
 
 
 ## Future Additions 
