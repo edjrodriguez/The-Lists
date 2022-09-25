@@ -48,5 +48,7 @@ __________________________
 __________________________
 - [Project Spec](https://frontend.turing.edu/projects/module-3/showcase.html)
 - UI [GitHub](https://github.com/dstavis/tasterx)
+- Deployed Express Server Landing Page (https://pure-sands-51403.herokuapp.com/)
+- Deployed Express Server Data (https://pure-sands-51403.herokuapp.com/lists/)
 - Express Server (https://github.com/edjrodriguez/API-Wish-List)
 - Work ticket kanban [Trello Board](https://trello.com/b/psFDNxc1/wish-list-project-board)
