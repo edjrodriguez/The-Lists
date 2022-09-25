@@ -7,7 +7,7 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 
 * Learning Goals and Core Functionality:
     * Demonstrate mastery of React, React Router, Asynchronous JavaScript, and E2E testing with Cypress
-    * Create personas and user stories to describe your target audience.
+    * Create personas and user stories to describe a target audience.
     * Work within constraints to deliver a product for a niche audience, which helps solve a problem unique to them.
     * Ability for users to view, store, or delete the data displayed in the application 
 
