@@ -34,7 +34,7 @@ Do you or your partner struggle to get the perfect gift for Xmas or birthdays?  
 https://user-images.githubusercontent.com/100659793/192145415-e92530ee-fc2b-4536-8e0c-026887fb2bbe.mov
 
 ## Future Additions 
- * Cleaner desktop layout (currently designed for mobile)
+ * Cleaner desktop layout (currently designed for iPhone XR screen)
  * Deploy server to different host such as AWS or Render (currently hosted on Heroku as a static API)
  * User can "check off" grocery items instead of deleting
  * User can see how many "active" items are in the grocery list
