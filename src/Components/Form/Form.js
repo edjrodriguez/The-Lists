@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import PropTypes from 'prop-types'
 import './Form.css'
 
 class Form extends React.Component{
@@ -152,3 +153,7 @@ class Form extends React.Component{
 }
 
 export default Form
+
+Form.propTypes = {
+    addItem: PropTypes.func.isRequired
+}

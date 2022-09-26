@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types'
 import './Card.css'
 
 const WishCard = ({ id, item, link, description, deleteItem }) => {
@@ -21,3 +22,11 @@ const WishCard = ({ id, item, link, description, deleteItem }) => {
 }
 
 export default WishCard
+
+WishCard.propTypes = {
+    id: PropTypes.string.isRequired,
+    item: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    deleteItem: PropTypes.func.isRequired
+}
