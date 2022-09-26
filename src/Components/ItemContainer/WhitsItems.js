@@ -1,5 +1,6 @@
 import React from "react"
 import WishCard from "../ItemCards/WishCard"
+import PropTypes from 'prop-types'
 import './ItemContainer.css'
 
 const WhitsItems = ({ whitWishList, deleteItem }) => {
@@ -29,3 +30,9 @@ const WhitsItems = ({ whitWishList, deleteItem }) => {
 }
 
 export default WhitsItems
+
+WhitsItems.propTypes = {
+    whitWishList: PropTypes.array.isRequired,
+    deleteItem: PropTypes.func.isRequired
+}
+

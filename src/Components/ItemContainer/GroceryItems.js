@@ -1,5 +1,6 @@
 import React from "react"
 import GroceryCard from "../ItemCards/GroceryCard"
+import PropTypes from 'prop-types'
 import './ItemContainer.css'
 
 const GroceryItems = ({ groceryItems, deleteItem }) => {
@@ -29,3 +30,8 @@ const GroceryItems = ({ groceryItems, deleteItem }) => {
 }
 
 export default GroceryItems
+
+GroceryItems.propTypes = {
+    groceryItems: PropTypes.array.isRequired,
+    deleteItem: PropTypes.func.isRequired
+}

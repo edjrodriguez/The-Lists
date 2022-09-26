@@ -1,5 +1,6 @@
 import React from "react"
 import WishCard from "../ItemCards/WishCard";
+import PropTypes from 'prop-types'
 import './ItemContainer.css'
 
 const EddiesItems = ({ eddieWishList, deleteItem }) => {
@@ -29,3 +30,8 @@ const EddiesItems = ({ eddieWishList, deleteItem }) => {
 }
 
 export default EddiesItems
+
+EddiesItems.propTypes = {
+    eddieWishList: PropTypes.array.isRequired,
+    deleteItem: PropTypes.func.isRequired
+}
